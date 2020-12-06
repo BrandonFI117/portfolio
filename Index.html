@@ -103,7 +103,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
 	<div id="store-area" hidden><tw-storydata name="Portfolio test" startnode="4" creator="Twine" creator-version="2.2.1" ifid="F7A61832-018D-481C-8199-682E7923955D" zoom="1" format="SugarCube" format-version="2.21.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">div.SS {
-  font-family: Times New Roman;
+  font-family: Courier New;
   font-size: 26px;}
 
 div.text {
@@ -122,7 +122,7 @@ div.message {
 
 body, tw-story
 {
-  font-family: VCR OSD Mono;
+  font-family: Courier New;
   font-size: 26px;
   color: White;
   background-color: Black;
@@ -145,14 +145,14 @@ a:hover {
 }
   
 .bigtext { 
-  font-family: VCR OSD Mono;
+  font-family: Courier New;
   font-size: 60px;
   color: crimson;
 }
 
 /* Typed.js text (and cursor) styling. */
 .typed, .typed-cursor {
-	font-family: Glass, VT323, monospace;
+	font-family: Borda;
 	color: #A3FF99;
 }
 
@@ -294,7 +294,7 @@ body {
 
 @font-face {
 	/* Font source: http://sensi.org/~svo/glasstty/ */
-	font-family: Glass;
+	font-family: Courier New;
 	src: url("Glass_TTY_VT220.eot");
 	src: url("Glass_TTY_VT220.eot?#iefix") format("embedded-opentype"),
 		 url("Glass_TTY_VT220.woff2") format("woff2"),
@@ -308,7 +308,8 @@ body {
 .passage {
   	color: #a3ff99;
   	text-shadow: 0px 0px 20px #5dff4b;
-	font-family: Glass, VT323, monospace;
+	font-family: Borda
+	 ;
 	font-size: 20px;
 	line-height: 22px;
 }
@@ -370,9 +371,41 @@ body {
 
 
 
+body, html {
+    height: 100%;
+}
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://imgur.com/a/X7IVnyS");
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
 
 
 
+@font-face {
+    font-family: my-font;
+    src: url("Fonts/Borda.ttf");
+}
 
 
 
@@ -558,8 +591,6 @@ Macro.add("hovertip", {
 
 
 
-
-
 </script><tw-tag name="forest" color="green"></tw-tag><tw-passagedata pid="1" name="CTRL C STUFF" tags="" position="1402,593" size="100,100">&lt;&lt;button [[&quot;For realzies?&quot;]]&gt;&gt;
 &lt;&lt;script&gt;&gt;
 UI.alert(&quot;Totes, yo!&quot;);
@@ -582,19 +613,26 @@ UI.alert(&quot;Totes, yo!&quot;);
 
 
 
-&lt;div class=&quot;message&quot;&gt;&lt;div class=&quot;message&quot;&gt;&lt;div class=&quot;typed-speed45-delay850&quot;&gt;The Collapse - Short Film Made in The Division&lt;/div&gt;&lt;/div&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/cfRNlGUcX1A&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;div class=&quot;dropdown&quot;&gt;
+  &lt;button class=&quot;dropbtn&quot;&gt;Pages&lt;/button&gt;
+  &lt;div class=&quot;dropdown-content&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;&lt;&lt;hovertip &quot;Home Page&quot;&gt;&gt;[[Home]]&lt;&lt;/hovertip&gt;&gt;&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;&lt;&lt;hovertip &quot;Games I made &amp; Game Dev Stuff&quot;&gt;&gt;[[Game Development]]&lt;&lt;/hovertip&gt;&gt;&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;&lt;&lt;hovertip &quot;Video Edits &amp; Stuff&quot;&gt;&gt;[[Video Editing]]&lt;&lt;/hovertip&gt;&gt;&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;&lt;&lt;hovertip &quot;Short Stories &amp; Stuff&quot;&gt;&gt;[[Writing]]&lt;&lt;/hovertip&gt;&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="2" name="&quot;For realzies?&quot;" tags="" position="1411,711" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="3" name="&quot;Open an alert!&quot;" tags="" position="1270,633" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="4" name="Home" tags="" position="917,136" size="100,100">&lt;div class=&quot;font-face&quot;&gt; 
+
+&lt;div class=&quot;hero-image&quot;&gt;
+  &lt;div class=&quot;hero-text&quot;&gt;
+    &lt;h1&gt;Hi! I&#39;m Brandon-Lee.&lt;/h1&gt;
+    &lt;p&gt;I make games, write stuff, and edit videos.&lt;/p&gt;
+    &lt;h2&gt;About Me&lt;/h2&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;message&quot;&gt;&lt;div class=&quot;message&quot;&gt;&lt;div class=&quot;typed-speed45-delay850&quot;&gt;Vago Mundo - A Genshin Impact Edit&lt;/div&gt;&lt;/div&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/_N-fKsglkCs&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;message&quot;&gt;&lt;div class=&quot;message&quot;&gt;&lt;div class=&quot;typed-speed45-delay850&quot;&gt;Barbatos - A Gundam Iron Blooded Orphans Edit&lt;/div&gt;&lt;/div&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/rBfY1pXvZCQ&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="2" name="&quot;For realzies?&quot;" tags="" position="1411,711" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="3" name="&quot;Open an alert!&quot;" tags="" position="1270,633" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="4" name="Home" tags="" position="916,136" size="100,100">
-
-
-&lt;div class=&quot;message&quot;&gt;&lt;div class=&quot;message&quot;&gt;ABOUT ME&lt;/div&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="5" name="Game Development" tags="" position="752,194" size="100,100">
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Game Development" tags="" position="752,194" size="100,100">
 
 &lt;div class=&quot;message&quot;&gt; Day-Trader: Made for the 5th Extra Credits Game Jam
 &lt;iframe frameborder=&quot;0&quot; src=&quot;https://itch.io/embed/473769?linkback=true&amp;amp;border_width=5&amp;amp;bg_color=000000&amp;amp;fg_color=ff1b1b&amp;amp;link_color=e30000&amp;amp;border_color=ff1b1b&quot; width=&quot;560&quot; height=&quot;175&quot;&gt;&lt;/iframe&gt;
@@ -625,7 +663,7 @@ View some of my written work here:
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="8" name="PassageHeader" tags="" position="919,10" size="100,100">
 &lt;div id=&quot;topbar&quot;&gt;&lt;div id=&quot;tbblock&quot;&gt;&lt;div id=&quot;tbtext&quot;&gt;&lt;div class=&quot;message&quot;&gt; 
-Brandon-Lee Anthony M || &lt;div class=&quot;typed-speed45-delay850&quot;&gt;[[Game Dev|Game Development]], [[Video Editor|Video Editing]], [[Writer|Writing]].&lt;/div&gt;
+Brandon-Lee Anthony M &lt;div class=&quot;typed-speed45-delay850&quot;&gt;[[Game Dev|Game Development]], [[Video Editor|Video Editing]], [[Writer|Writing]].&lt;/div&gt;
 &lt;div class=&quot;dropdown&quot;&gt;
   &lt;button class=&quot;dropbtn&quot;&gt;Pages&lt;/button&gt;
   &lt;div class=&quot;dropdown-content&quot;&gt;
@@ -638,6 +676,7 @@ Brandon-Lee Anthony M || &lt;div class=&quot;typed-speed45-delay850&quot;&gt;[[G
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 
 
 
@@ -795,7 +834,18 @@ wrong they are.
 
 End Journal.
 &lt;/div&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="11" name="Typed Test" tags="" position="562,374" size="100,100"></tw-passagedata><tw-passagedata pid="12" name="No More Heroes - A one-shot original story concept inspired by My Hero Academia and The Boys." tags="" position="822,398" size="100,100">&lt;div class=&quot;message&quot;&gt;&lt;div class=&quot;SS&quot;&gt;      No More Heroes&lt;/div&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="11" name="Typed Test" tags="" position="565,378" size="100,100">&lt;!-- Side navigation --&gt;
+&lt;div class=&quot;sidenav&quot;&gt;
+  &lt;a href=&quot;#&quot;&gt;[[Game Development]]&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;[[Video Editing]]&lt;/a&gt;
+  &lt;a href=&quot;#&quot;&gt;[[Writing]]&lt;/a&gt;
+
+&lt;/div&gt;
+
+&lt;!-- Page content --&gt;
+&lt;div class=&quot;main&quot;&gt;
+  ...
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="No More Heroes - A one-shot original story concept inspired by My Hero Academia and The Boys." tags="" position="822,398" size="100,100">&lt;div class=&quot;message&quot;&gt;&lt;div class=&quot;SS&quot;&gt;      No More Heroes&lt;/div&gt;&lt;/div&gt;
 
 &lt;div class=&quot;message&quot;&gt;&lt;div class=&quot;SS&quot;&gt;
 
@@ -1025,7 +1075,7 @@ reading? Maybe this was all a mistake. Oh God, what have I done? I’m 29
 
 and trapped in this nightmare. I’ve never felt so motivated yet so 
 
-tired and done with everything at the same time. I want to keep going 
+tired and fed up with everything at the same time. I want to keep going 
 
 but I want to give in. I want to call it quits but my brain keeps 
 
@@ -1037,7 +1087,7 @@ even focus on the screen yet somehow I still keep typing. I barely even
 
 feel conscious yet I still. Keep. Typing. Why can’t I make up my mind? 
 
-Am I done? Am I gonna give up everything when I’m this far in. I don’t 
+Am I done? Am I gonna give up everything when I’m this far in? I don’t 
 
 know anymore. I just. Don’t. Know. Is this what it’s like to be 
 
